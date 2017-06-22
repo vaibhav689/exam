@@ -40,6 +40,20 @@
             t=parseFloat(t);
             var i;sum=0;
             var x;
+            if(fr==""||t==""){
+                alert("Enter both the values!");
+            }
+            else if(fr!=""){
+                if(isNaN(fr)){
+                    alert("Enter a numeric value!");
+                }
+            }
+            else if(t!=""){
+                if(isNaN(t)){
+                    alert("Enter a numeric value!");
+                }
+            }
+            
             
             for(i=fr;i<t+1;i++){
                 sum=sum +i;
