@@ -31,7 +31,29 @@
                 text-align: left;
             }
         </style>
-        <script>
+        <script type="text/javascript">
+        function SUM(){
+            var f=document.getElementById("form1");
+            var fr=f.from.value;
+            var t=f.to.value;
+            fr=parseFloat(fr);
+            t=parseFloat(t);
+            var i;sum=0;
+            var x;
+            
+            for(i=fr;i<t+1;i++){
+                sum=sum +i;
+                document.getElementById("result").innerHTML=sum;
+            }
+             
+
+            
+            return false
+        }
+
+        
+            
+
 
         </script>
     </head>
@@ -59,7 +81,7 @@
 
             </p>
             <p>
-                <input type="submit" name="Sum" value="SUM">
+                <input onclick="return SUM()" type="submit" name="Sum" value="SUM">
                 <input type="reset" name="reset" value="CLEAR">
             </p>
             <p>The sum is <span id="result"></span>.</p>
